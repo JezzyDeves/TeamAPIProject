@@ -9,8 +9,9 @@ namespace API.Data
 {
     public Guid publicId = new Guid();
     public Post post = new Post();
-    public class Like(Post post)
+    
+    public class Like()
     {
-        Post LikedPost { get; set; }
+      
     }
 }
