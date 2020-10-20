@@ -23,20 +23,19 @@ namespace SocialMediaAPI.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Post> Posts { get; set; } //
+
+        public DbSet<Reply> Replies { get; set; } //
+
+        public DbSet<Comment> Comments { get; set; }
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
-        {
-        public DbSet<Post> Posts { get; set; } 
-
-        public DbSet<Reply> Replies { get; set; } 
-
-        public DbSet<Comment> Comments { get; set; } 
-    }
+           : base("DefaultConnection", throwIfV1Schema: false)
+        
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<Post> Post { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
