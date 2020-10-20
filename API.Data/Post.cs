@@ -16,6 +16,6 @@ namespace API.Data
         [Required]
         public string Text { get; set; }
         [Required]
-        public User Author { get; set; }
+        public Guid Author { get; set; }
     }
 }
