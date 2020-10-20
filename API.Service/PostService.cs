@@ -12,27 +12,52 @@ namespace API.Service
     class PostService
     {
         private readonly Guid _userID;
+        private int PostID;
 
-        public PostService(Guid userID)
-        {
-            _userID = userID;
-        }
-
-        public bool CreatePost(Post model)
+        public bool CreatePost(PostCreate newPost)
         {
             var entity =
-                 new Post()
-                 {
-                     ID = _userID;
-                     Title title = model
-                     Text = model.Comment,
-                 }
+                new Post()
+                {
+                    OwnerID = _userID,
+                    Title = newPost.Title,
+                    Content = newPost.Text
+                };
 
-            using (var ctx = CreatePost(entity))
+            using (var ctx = new ApplicationDbContext())
             {
-                ctx.Post.Add(entity);
+                ctx.Posts.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
+	
+
+//    public IENumerable<PostLineItem> GetPost()
+//        {
+//            using (var ctx = new ApplicationDbContext())
+//            {
+//                  {
+//                    var query =
+//                        ctx
+//                            .Posts
+//                                .Where(e => e.OwnerID == _userID)
+//                                .Select(
+//                                    e =>
+//                                    new PostLineItem()
+//                                      {
+//                                          PostID = e.PostID,
+//                                          Title = e.Title,
+//                                      }
+//                                  );
+//                   }
+
+
+//                   return query.ToArray();
+//              }
+
     }
+       
+
+
+    
 }
