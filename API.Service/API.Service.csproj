@@ -100,10 +100,6 @@
       <Project>{6512CC82-056B-4DB4-AA2D-06FBA5C984DB}</Project>
       <Name>API.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SocialMediaAPI\SocialMediaAPI.csproj">
-      <Project>{81E6375F-78C8-43BC-9142-F9B5FBDC3ACA}</Project>
-      <Name>SocialMediaAPI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

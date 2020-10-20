@@ -32,10 +32,9 @@ namespace SocialMediaAPI.Models
         {
             return new ApplicationDbContext();
         }
-        public DbSet<Post> Post { get; set; }
-        public DbSet<Post> Posts { get; set; } //
+        public DbSet<Post> Posts { get; set; }
 
-        public DbSet<Reply> Replies { get; set; } //
+        public DbSet<Reply> Replies { get; set; }
 
         public DbSet<Comment> Comments { get; set; }
 
