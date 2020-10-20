@@ -21,7 +21,9 @@ namespace API.Service
                 {
                     ID = PostID,
                     Title = newPost.Title,
-                    Text = newPost.Text
+                    Text = newPost.Text,
+                    Author = _userID
+                    
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -38,11 +40,11 @@ namespace API.Service
                     var query =
                         ctx
                             .Posts
-                                .Where(e => e.OwnerID == _userID)
+                                .Where(e => e.Author == _userID)
                                 .Select(e =>
                                         new PostDetail()
                                         {
-                                            PostID = e.PostID,
+                                            PostID = e.ID,
                                             Title = e.Title,
                                         }
                                   );
@@ -58,18 +60,19 @@ namespace API.Service
             return 1;
         }
 
-        public string CommentPost(int postID, PostCommentDetail newPostComment)
+        public bool CommentPost(int postID, PostCommentDetail newPostComment)
         {
             var entity =
                 new Comment()
                 {
-                    PostID = postID,
                     Text = newPostComment.Text,
+                    Author = _userID,
+                    PostID = newPostComment.PostId
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Posts.Add(entity);
+                ctx.Comments.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
