@@ -10,9 +10,10 @@ namespace API.Models
 {
     public class ReplyCreate
     {
+        //[Required]
+        //public Comment ReplyComment { get; set; }
+
         [Required]
-        public int PostId { get; set; }
-        [Required]
-        public Comment ReplyComment { get; set; }
+        public string Text { get; set; }
     }
 }

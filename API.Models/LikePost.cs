@@ -9,8 +9,7 @@ namespace API.Models
 {
     public class LikePost
     {
-        public int PostId { get; set; }
-        public Post PostLike { get; set; }
-        public User Liker { get; set; }
+        public Post LikedPost { get; set; }
+        public Guid Liker { get; set; }
     }
 }

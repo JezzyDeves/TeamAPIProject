@@ -11,12 +11,7 @@ namespace API.Models
     public class PostCreate
     {
         [Required]
-        public int PostId { get; set; }
-        [Required]
         public string Title { get; set; }
-        [Required]
         public string Text { get; set; }
-        [Required]
-        public User Author { get; set; }
     }
 }

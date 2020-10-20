@@ -11,10 +11,8 @@ namespace API.Models
     public class CommentCreate
     {
         [Required]
-        public int CommentId { get; set; }
-        [Required]
         public string Text { get; set; }
-        [Required]
-        public User Author { get; set; }
+        //[Required]
+        //public User Author { get; set; }
     }
 }
