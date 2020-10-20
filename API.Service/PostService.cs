@@ -27,5 +27,30 @@ namespace API.Service
                     return ctx.SaveChanges() == 1;
                 }
             }
-        }
+        public IENumerable<PostLineItem> GetPost()
+//        {
+//            using (var ctx = new ApplicationDbContext())
+//            {
+//                  {
+//                    var query =
+//                        ctx
+//                            .Posts
+//                                .Where(e => e.OwnerID == _userID)
+//                                .Select(
+//                                    e =>
+//                                    new PostLineItem()
+//                                      {
+//                                          PostID = e.PostID,
+//                                          Title = e.Title,
+//                                      }
+//                                  );
+//                   }
+
+
+        //                   return query.ToArray();
+        //              }
+
+
+
+    }
 }
