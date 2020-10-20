@@ -20,19 +20,16 @@ namespace API.Data
     {
         [Key]
         public int CommentID { get; set; }
-        [ForeignKey(nameof(Author))]
-        public Guid OwnerID { get; set; }
-        public virtual User Author { get; set; }
         [Required]
-        public int PostId { get; set; }
+        public string Text { get; set; }
+        [Required]
+        public Guid Author { get; set; }
         [ForeignKey(nameof(Post))]
         public int PostID { get; set; }
         public virtual Post Post { get; set; }
-        [Required]
-        public string Content { get; set; }
         //[Required]
         //public DateTimeOffset Created { get; set; }
         //[Required]
         //public DateTimeOffset? Modified { get; set; }
-     }
+    }
 }
