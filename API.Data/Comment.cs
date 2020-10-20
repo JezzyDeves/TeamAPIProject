@@ -11,6 +11,6 @@ namespace API.Data
 {
     public class Reply : Comment
     {
-        public string Comment { get; set;}
+        public Comment Reply { get; set;}
     }
 }
