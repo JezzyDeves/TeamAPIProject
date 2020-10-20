@@ -84,11 +84,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserCreate.cs" />
+    <Compile Include="ReplyCreate.cs" />
+    <Compile Include="PostDetail.cs" />
+    <Compile Include="PostCreate.cs" />
+    <Compile Include="PostCommentDetail.cs" />
+    <Compile Include="LikePost.cs" />
+    <Compile Include="CommentCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API.Data\API.Data.csproj">
+      <Project>{2BA3F9A5-75C6-4123-993B-33E8483D6507}</Project>
+      <Name>API.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
