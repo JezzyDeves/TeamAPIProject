@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserCreate.cs" />
     <Compile Include="ReplyCreate.cs" />
     <Compile Include="PostDetail.cs" />
     <Compile Include="PostCreate.cs" />
