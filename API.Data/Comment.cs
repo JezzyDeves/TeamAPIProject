@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace API.Data
 {
-    class Comment
-    {
-    }
-    public class Comment
+   
+        public class Comment
     {
         [Key]
         public int CommentId { get; set; }

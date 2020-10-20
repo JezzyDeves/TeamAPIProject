@@ -16,8 +16,6 @@ namespace API.Data
         [ForeignKey(nameof(LikedPost))]//Should the foreign keys be under the Post aka General Store?
         public virtual Post likedPost { get; set; }
 
-
-
         public Guid Liker { get; set; }
 
         [ForeignKey(nameof(Liker))]
