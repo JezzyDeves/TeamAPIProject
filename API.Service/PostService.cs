@@ -12,14 +12,12 @@ namespace API.Service
     public class PostService
     {
         private readonly Guid _userID;
-        private int PostID;
 
         public bool CreatePost(PostCreate newPost)
         {
             var entity =
                 new Post()
                 {
-                    ID = PostID,
                     Title = newPost.Title,
                     Text = newPost.Text,
                     Author = _userID
