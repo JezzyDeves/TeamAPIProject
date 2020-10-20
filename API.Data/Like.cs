@@ -28,5 +28,6 @@ namespace API.Data
         [ForeignKey(nameof(User))]
         public Guid UserID { get; set; }
         public virtual User User { get; set; }
+
     }
 }

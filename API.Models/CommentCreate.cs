@@ -17,4 +17,13 @@ namespace API.Models
         [Required]
         public User Author { get; set; }
     }
+
+    //[Required]
+    //[Display(Name = "Your Comment")]
+    //public string Content { get; set; }
+
+    //[Required]
+    //public int PostId { get; set; }
+    //[ForeignKey(nameof(PostId))]
+    //public virtual Post post { get; set; }
 }

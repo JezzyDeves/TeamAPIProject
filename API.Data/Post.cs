@@ -11,9 +11,11 @@ namespace API.Data
     {
         [Key]
         public int ID { get; set; }
-        [Required]
+        //[Required]
+        //[Display(Name = "Post Title")]
         public string Title { get; set; }
-        [Required]
+        //[Required]
+        //[Display(Name = "Your Post")]
         public string Text { get; set; }
         [Required]
         public User Author { get; set; }

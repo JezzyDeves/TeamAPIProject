@@ -25,10 +25,12 @@ namespace API.Data
         public virtual User Author { get; set; }
         [Required]
         public int PostId { get; set; }
-        [ForeignKey(nameof(Post))]
+        [ForeignKey(nameof(PostID))]
         public int PostID { get; set; }
-        public virtual Post Post { get; set; }
+        //public virtual Post Post { get; set; }
         [Required]
+        //public string Title { get; set; }
+        //[Required]
         public string Content { get; set; }
         //[Required]
         //public DateTimeOffset Created { get; set; }

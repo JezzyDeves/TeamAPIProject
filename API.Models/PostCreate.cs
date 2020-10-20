@@ -13,8 +13,10 @@ namespace API.Models
         [Required]
         public int PostId { get; set; }
         [Required]
+        //[Display(Name = "Post Title")]
         public string Title { get; set; }
         [Required]
+        //[Display(Name = "Your Post")]
         public string Text { get; set; }
         [Required]
         public User Author { get; set; }
